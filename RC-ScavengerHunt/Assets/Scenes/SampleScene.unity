@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674822543}
   - component: {fileID: 674822542}
+  - component: {fileID: 674822544}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -351,6 +352,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674822544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674822541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 2109345041}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +594,7 @@ GameObject:
   - component: {fileID: 2109345039}
   - component: {fileID: 2109345038}
   - component: {fileID: 2109345041}
+  - component: {fileID: 2109345042}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -641,7 +660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109345036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0, z: 5}
+  m_LocalPosition: {x: -1.81, y: -1.88, z: 5}
   m_LocalScale: {x: 63, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,3 +702,28 @@ PolygonCollider2D:
       - {x: 0.40657076, y: -0.49864656}
       - {x: 0.5020742, y: -0.49829483}
       - {x: 0.49878877, y: 0.49741495}
+--- !u!68 &2109345042
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109345036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: -0.5028412, y: -0.50139904}
+  - {x: 0.50450814, y: -0.49720955}
+  - {x: 0.4982388, y: 0.49478787}
+  - {x: -0.4991031, y: 0.49781758}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
