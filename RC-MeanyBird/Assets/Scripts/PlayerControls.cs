@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    //Function where the player collides with a object
+    private void OnCollisionEnter2D(Collision collision)
+    {
+        if(collision.gameObject.tag == "HighSpike"
+           || collision.gameObject.tag == "LowSpike"
+           || collision.gameObject.tag == "Ground")
+        {
+            //Game is at a stopping state
+            Time.timeScale = 0;
+        }
+    }
     // Game manager object
     [Header("Game Controller Obejct for controlling the game")]
     public GameController gameController;
