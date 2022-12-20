@@ -143,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8324910319232949183}
   - component: {fileID: 8324910319232949181}
-  - component: {fileID: 8324910319232949180}
+  - component: {fileID: 6113938940411096210}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: HighSpike
@@ -218,8 +218,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8324910319232949180
-BoxCollider2D:
+--- !u!60 &6113938940411096210
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -241,9 +241,27 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 3.26}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.715, y: 0.74}
+      - {x: 0.585, y: 0.9}
+      - {x: 0.065, y: 1.5799999}
+      - {x: 0.015, y: 1.63}
+      - {x: -0.015, y: 1.63}
+      - {x: -0.023103237, y: 1.4880605}
+      - {x: -0.7534516, y: 1.5919399}
+      - {x: -0.435, y: 1.09}
+      - {x: -0.565, y: 0.91999996}
+      - {x: -0.59499997, y: 0.88}
+      - {x: -0.635, y: 0.83}
+      - {x: -0.695, y: 0.75}
+      - {x: -0.73499995, y: 0.7}
+      - {x: -0.7531032, y: 1.5723795}
+      - {x: -0.7531032, y: -0.75657487}
+      - {x: -0.0010387897, y: -1.6529849}
+      - {x: 0.70639426, y: -0.5571532}
+      - {x: 0.79499996, y: 0.63}
+      - {x: 0.6912065, y: 1.5793945}
 --- !u!1 &8324910319268767768
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8324910319268767769}
   - component: {fileID: 8324910319268767775}
-  - component: {fileID: 8324910319268767774}
+  - component: {fileID: 8842153255312609815}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: LowSpike
@@ -329,8 +347,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8324910319268767774
-BoxCollider2D:
+--- !u!60 &8842153255312609815
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -352,6 +370,24 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 3.26}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.715, y: 0.74}
+      - {x: 0.585, y: 0.9}
+      - {x: 0.065, y: 1.5799999}
+      - {x: 0.015, y: 1.63}
+      - {x: -0.015, y: 1.63}
+      - {x: -0.065, y: 1.5799999}
+      - {x: -0.125, y: 1.5}
+      - {x: -0.435, y: 1.09}
+      - {x: -0.565, y: 0.91999996}
+      - {x: -0.59499997, y: 0.88}
+      - {x: -0.635, y: 0.83}
+      - {x: -0.695, y: 0.75}
+      - {x: -0.73499995, y: 0.7}
+      - {x: -0.79499996, y: 0.63}
+      - {x: -0.79499996, y: -1.63}
+      - {x: -0.74128926, y: -1.5821844}
+      - {x: 0.81791097, y: -1.600848}
+      - {x: 0.79499996, y: 0.63}
+      - {x: 0.775, y: 0.65999997}
