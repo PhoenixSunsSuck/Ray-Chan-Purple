@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 
 public class GameController : MonoBehaviour
@@ -41,12 +41,14 @@ public class GameController : MonoBehaviour
     //Game over function
     public void GameOver()
     {
+        
         //Stops the spawn function
         CancelInvoke("Spawn");
         //Game over canvas is visible 
         gameOverCanvas.SetActive(true);
         //Game is at a stopping state
         Time.timeScale = 0;
+        Debug.Log("Not Paused");
     }
     
 }

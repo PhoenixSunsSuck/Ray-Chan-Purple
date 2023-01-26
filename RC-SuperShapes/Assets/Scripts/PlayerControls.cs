@@ -36,5 +36,6 @@ public class PlayerControls : MonoBehaviour
     {
         //Game Over function is called from the game manager
         GameObject.Find("GameController").GetComponent<GameController>().GameOver();
+        //Time.timeScale = 0;
     }
 }
