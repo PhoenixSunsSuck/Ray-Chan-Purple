@@ -30,12 +30,12 @@ public class Shape : MonoBehaviour
         transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
         //local scale on x axis is less
         //or equals to .05
-        if(transform.localScale.x <= .50f)
+        if(transform.localScale.x <= .100f)
         {
             //Destroy object
             Destroy(gameObject);
+            //Add 1 to score
+            Score.score++;
         }
-        //Add 1 to score
-        Score.score++;
     }
 }
