@@ -37,6 +37,13 @@ public class PlayerControls : MonoBehaviour
             //jump power, mass, and
             //gravity
             rb.AddForce(Vector3.up * (jumpPower * rb.mass * rb.gravityScale * 20.0f));
+            //If the players position is less than
+            //the original of the player
+            if (transform.position.x < posX)
+            {
+                //Execute GameOver function
+                GameOver();
+            }
         }
     }
 
@@ -63,5 +70,11 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
 
+    }
+    //Game over function
+    void GameOver()
+    {
+        //Game is at a stopping state
+        Time.timeScale = 0;
     }
 }
