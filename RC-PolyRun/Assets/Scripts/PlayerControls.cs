@@ -55,6 +55,21 @@ public class PlayerControls : MonoBehaviour
             //isGrounded = true
             isGrounded = true;
         }
+        //If colliders tag equals enemy
+        if (collision.collider.tag == "Enemy")
+        {
+            //Game OVer function is called
+            GameOver();
+        }
+        //If triggers tag equals coin
+        if (collision.collider.tag == "Coin")
+        {
+            //Call IncrementScore from
+            //Game Controller
+            GameObject.Find("GameController").GetComponent<GameController>().IncrementScore();
+            //Destroy Object
+            Destroy(collision.gameObject);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -74,7 +89,16 @@ public class PlayerControls : MonoBehaviour
     //Game over function
     void GameOver()
     {
-        //Game is at a stopping state
-        Time.timeScale = 0;
+        //Game over function is called from the game manager
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //If triggers tag equals coin
+        if(collision.tag == "Coin")
+        {
+            //Destroy object
+            Destroy(collision.gameObject);
+        }
     }
 }
