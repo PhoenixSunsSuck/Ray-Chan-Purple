@@ -18,6 +18,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         //Var rb equals to Rb2d
         //component
         rb = transform.GetComponent<Rigidbody2D>();
@@ -72,6 +73,14 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        //if colliders tag equals ground
+        if(collision.collider.tag == "Ground")
+        {
+            //isGrounded = true;
+        }
+    }
     void OnCollisionExit2D(Collision2D collision)
     {
         //if colliders tag equals aroumnd
