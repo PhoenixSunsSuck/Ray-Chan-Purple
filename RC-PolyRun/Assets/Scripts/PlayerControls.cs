@@ -62,15 +62,7 @@ public class PlayerControls : MonoBehaviour
             //Game OVer function is called
             GameOver();
         }
-        //If triggers tag equals coin
-        if (collision.collider.tag == "Coin")
-        {
-            //Call IncrementScore from
-            //Game Controller
-            GameObject.Find("GameController").GetComponent<GameController>().IncrementScore();
-            //Destroy Object
-            Destroy(collision.gameObject);
-        }
+    
     }
 
     private void OnCollisionStay(Collision collision)
@@ -104,9 +96,14 @@ public class PlayerControls : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //If triggers tag equals coin
-        if(collision.tag == "Coin")
+        //If triggers tag equals coin
+        if (collision.gameObject.tag == "Coin")
         {
-            //Destroy object
+            //Call IncrementScore from
+            //Game Controller
+           GameObject.Find("GameController").GetComponent<GameController>().IncrementScore();
+
+            //Destroy Object
             Destroy(collision.gameObject);
         }
     }
