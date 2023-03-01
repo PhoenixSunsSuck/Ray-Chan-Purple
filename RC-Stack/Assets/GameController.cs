@@ -27,7 +27,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Call new block function
+        NewBlock();
     }
 
     void NewBlock()
@@ -71,16 +72,60 @@ public class GameController : MonoBehaviour
             StartCoroutine(X());
             //Returns value
             return;
-            //Last  cube equals to the current cube
-            lastCube = currentCube;
-            //Current cube equals to the spawned last Cube
-            currentCube = Instantiate(lastCube);
-            //Current cube equals to the spawned
+            
         }
+        //Last  cube equals to the current cube
+        lastCube = currentCube;
+        //Current cube equals to the spawned last Cube
+        currentCube = Instantiate(lastCube);
+        //Current cube equals to the spawned
+        //last cube
+        currentCube = Instantiate(lastCube);
+        //Current cube component mesh renderer material
+        //set the color according to the color settings
+        currentCube.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.HSVToRGB((Level / 100f) % 1f, 1f, 1f));
+        //Add 1 to level
+        Level++;
+        //Camera position equalss to the 
+        //position of the current cube
+        Camera.main.transform.position = new Vector3(100, 100, 100);
+        //Camera looks at the current cube
+        Camera.main.transform.LookAt(currentCube.transform.position);
     }
     // Update is called once per frame
     void Update()
     {
-
+        //If done is true
+        if (Done)
+        {
+            //return value
+            return;
+        }
+        //Var time equals to the time scine game startup
+        var time = Mathf.Abs(Time.realtimeSinceStartup % 2f - 1f);
+        //Var pos1 equals last cube position
+        var pos1 = lastCube.transform.position + Vector3.up * 10f;
+        //var pos2 equals to the pos1 plus any level by number of 2
+        var pos2 = pos1 + ((Level % 2 == 0) ? Vector3.left : Vector3.forward) * 120;
+        //if the level is by the number of two
+        if(Level % 2 == 0)
+        {
+            //Current pos of the current cube based of the 3 axis of pos1,pos2, and time
+            currentCube.transform.position = Vector3.Lerp(pos2, pos1, time);
+        }
+        //if left mouse button is clicked
+        if (Input.GetMouseButtonDown(0))
+        {
+            //New block function
+            //is called
+            NewBlock();
+        }
+    }
+    IEnumerator X()
+    {
+        //Wait three seconds then codee is executed
+        yield return new WaitForSeconds(3f);
+        //The scene sample scene is loaded
+        SceneManager.LoadScene("SampleScene");
     }
 }
