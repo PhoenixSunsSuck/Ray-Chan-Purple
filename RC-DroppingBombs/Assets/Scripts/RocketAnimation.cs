@@ -14,7 +14,7 @@ public class RocketAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void fixedUpdate()
+    void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
 
