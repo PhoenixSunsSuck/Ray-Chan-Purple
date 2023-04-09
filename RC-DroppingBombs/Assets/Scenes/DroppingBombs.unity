@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomX: 0
   spawnY: 0
-  bombPrefab: {fileID: 0}
+  bombPrefab: {fileID: 6146426715321008638, guid: c83e87e26eb829041a1e855f5093f2a1, type: 3}
   delay: 2
   active: 1
   delayRange: {x: 1, y: 2}
