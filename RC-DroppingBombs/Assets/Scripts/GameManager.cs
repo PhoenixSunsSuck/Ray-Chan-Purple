@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private Spawner spawner;
+    public GameObject title;
 
-    private void Awake()
+    void Awake()
     {
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
     }
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         spawner.active = false;
+        title.SetActive(true);
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
         if(Input.anyKeyDown)
         {
             spawner.active = true;
+            title.SetActive(false);
         }
     }
 }
