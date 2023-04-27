@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     private GameObject player;
     private bool gameStarted = false;
+    public GameObject splash;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         spawner.active = false;
         title.SetActive(true);
+        splash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
     void ResetGame()
     {
         spawner.active = true;
-        title.SetActive(false);
+        splash.SetActive(false);
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), playerPrefab.transform.rotation);
         gameStarted = true;
     }
