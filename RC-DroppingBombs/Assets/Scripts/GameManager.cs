@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     void ResetGame()
     {
         spawner.active = true;
+        title.SetActive(false);
         splash.SetActive(false);
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), playerPrefab.transform.rotation);
         gameStarted = true;

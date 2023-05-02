@@ -735,7 +735,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Press Any Key to Start
 --- !u!222 &785204763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: {fileID: 1714362861}
-  playerPrefab: {fileID: 0}
-  splash: {fileID: 0}
+  playerPrefab: {fileID: 1293495186871882, guid: 82169fb5eac75114e9dae4d2dd916e6f, type: 3}
+  splash: {fileID: 690919653}
 --- !u!1 &1533545469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,8 +1243,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000046864, y: -154.25}
-  m_SizeDelta: {x: 387.8495, y: 80.703}
+  m_AnchoredPosition: {x: 32.2032, y: -154.25}
+  m_SizeDelta: {x: 452.2558, y: 80.703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533545471
 MonoBehaviour:
@@ -1283,7 +1283,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 72
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: GAME OVER
 --- !u!222 &1533545473
 CanvasRenderer:
   m_ObjectHideFlags: 0
