@@ -365,8 +365,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676521243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.1257, y: -2.6066, z: 10}
-  m_LocalScale: {x: 91.16301, y: 53.441517, z: 1}
+  m_LocalPosition: {x: -0.1686, y: 1.065, z: 10}
+  m_LocalScale: {x: 45.426525, y: 18.912952, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -637,8 +637,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771277942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.2175, y: -3.0157, z: 5}
-  m_LocalScale: {x: 91.80457, y: 53.703133, z: 1}
+  m_LocalPosition: {x: -0.2532, y: 1.0734, z: 5}
+  m_LocalScale: {x: 45.461445, y: 20.081308, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -880,7 +880,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1254,8 +1254,8 @@ MonoBehaviour:
   title: {fileID: 1714362861}
   playerPrefab: {fileID: 1293495186871882, guid: 82169fb5eac75114e9dae4d2dd916e6f, type: 3}
   splash: {fileID: 690919653}
-  scoreSystem: {fileID: 0}
-  scoreText: {fileID: 0}
+  scoreSystem: {fileID: 1416612925}
+  scoreText: {fileID: 2035642264}
   pointsWorth: 1
 --- !u!1 &1533545469
 GameObject:

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         player = playerPrefab;
+        scoreText.enabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -59,8 +60,12 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject bombObject in nextBomb)
         {
-            if (bombObject.transform.position.y < (-screenBounds.y) - 12 || !gameStarted)
+            if (!gameStarted)
             {
+                Destroy(bombObject);
+            } else if (bombObject.transform.position.y < (-screenBounds.y) && gameStarted)
+            {
+                scoreSystem.GetComponent<Score>().AddScore(pointsWorth);
                 Destroy(bombObject);
             }
         }
@@ -72,5 +77,9 @@ public class GameManager : MonoBehaviour
         splash.SetActive(false);
         player = Instantiate(playerPrefab, new Vector3(0, 0, 0), playerPrefab.transform.rotation);
         gameStarted = true;
+
+        scoreText.enabled = true;
+        scoreSystem.GetComponent<Score>().score = 0;
+        scoreSystem.GetComponent<Score>().Start();
     }
 }
